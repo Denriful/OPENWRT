@@ -1,0 +1,4 @@
+#!/bin/sh
+
+sleep 5
+ip route add table vpn default dev singtun0

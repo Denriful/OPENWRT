@@ -1,0 +1,69 @@
+
+config interface 'loopback'
+        option device 'lo'
+        option proto 'static'
+        option ipaddr '127.0.0.1'
+        option netmask '255.0.0.0'
+
+config globals 'globals'
+        option ula_prefix 'fd15:4782:77dd::/48'
+
+config device
+        option name 'br-lan'
+        option type 'bridge'
+        list ports 'lan1'
+        list ports 'lan2'
+        list ports 'lan3'
+        list ports 'lan4'
+
+config device
+        option name 'lan1'
+        option macaddr 'c8:7f:54:72:50:40'
+
+config device
+        option name 'lan2'
+        option macaddr 'c8:7f:54:72:50:40'
+
+config device
+        option name 'lan3'
+        option macaddr 'c8:7f:54:72:50:40'
+
+config device
+        option name 'lan4'
+        option macaddr 'c8:7f:54:72:50:40'
+
+config interface 'lan'
+        option device 'br-lan'
+        option proto 'static'
+        option ipaddr '192.168.144.1'
+        option netmask '255.255.255.0'
+        option ip6assign '60'
+
+config device
+        option name 'eth1'
+        option macaddr 'c8:7f:54:72:50:40'
+
+config interface 'wan'
+        option device 'eth1'
+        option proto 'dhcp'
+
+config interface 'wan6'
+        option device 'eth1'
+        option proto 'dhcpv6'
+
+config rule
+        option name 'mark0x1'
+        option mark '0x1'
+        option priority '100'
+        option lookup 'vpn'
+
+
+#config route 'vpn_route'
+#       option name 'vpn'
+#       option interface 'tun0'
+#       option table 'vpn'
+#       option target '0.0.0.0/0'
+
+config interface 'proxy'
+        option proto 'none'
+        option device 'singtun0'
