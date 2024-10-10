@@ -117,7 +117,7 @@
           "outbound": "vless-out"
         },
         {
-          "domain_suffix": ".weather.com",
+          "domain_suffix": "weather.com",
           "outbound": "vless-out"
         }
       ],
