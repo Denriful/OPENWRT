@@ -115,6 +115,10 @@
         {
           "domain_suffix": ".gstatic.com",
           "outbound": "vless-out"
+        },
+        {
+          "domain_suffix": ".weather.com",
+          "outbound": "vless-out"
         }
       ],
       "rule_set": [
