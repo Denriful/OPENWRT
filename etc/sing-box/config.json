@@ -10,7 +10,7 @@
             {
                 "tag": "google",
                 "address": "tls://8.8.8.8"
-            },
+            },      
             {
                 "tag": "block",
                 "address": "rcode://success"
@@ -45,23 +45,23 @@
         {
           "type": "vless",
           "tag": "vless-out",
-          "server": "IP",
-          "server_port": "port",
-          "uuid": "71332db3-c8fc-466b-91f1-example9abd7",
+          "server": "",
+          "server_port": 443,
+          "uuid": "",
           "flow": "xtls-rprx-vision",
           "network": "tcp",
           "tls": {
             "enabled": true,
             "insecure": false,
-            "server_name": "somedomain.com",
+            "server_name": "",
             "utls": {
               "enabled": true,
-              "fingerprint": "random"
+              "fingerprint": "chrome"
             },
             "reality": {
               "enabled": true,
-              "public_key": "P3T_abiWhnSexampleS_8uJyUIAcj3BfIlg6cDnc",
-              "short_id": "3c58examplef4b"
+              "public_key": "",
+              "short_id": ""
             }
           }
         }
@@ -71,7 +71,7 @@
         {
           "rule_set": "antizapret",
           "outbound": "vless-out"
-        },
+        },      
         {
           "domain_suffix": ".youtube.com",
           "outbound": "vless-out"
@@ -119,8 +119,124 @@
         {
           "domain_suffix": "weather.com",
           "outbound": "vless-out"
+        },
+        {
+          "domain_suffix": ".hashicorp.com",
+          "outbound": "vless-out"
+        },
+        {
+          "domain_suffix": ".instagram.com",
+          "outbound": "vless-out"
+        },
+        {
+          "domain_suffix": ".cdninstagram.com",
+          "outbound": "vless-out"
+        },
+        {
+          "domain_suffix": ".instagr.am",
+          "outbound": "vless-out"
+        },
+        {
+          "domain_suffix": ".igsonar.com",
+          "outbound": "vless-out"
+        },
+        {
+          "domain_suffix": "threads.net",
+          "outbound": "vless-out"
+        },
+        {
+          "domain_suffix": "threadsapp.net",
+          "outbound": "vless-out"
+        },
+        {
+          "domain_suffix": ".fortinet.com",
+          "outbound": "vless-out"
+        },
+        {
+          "domain_suffix": "swagger.io",
+          "outbound": "vless-out"
+        },
+        {
+          "domain_suffix": ".vmware.com",
+          "outbound": "vless-out"
+        },
+        {
+          "domain_suffix": ".digitalocean.com",
+          "outbound": "vless-out"
+        },
+        {
+          "domain_suffix": ".baeldung.com",
+          "outbound": "vless-out"
+        },
+        {
+          "domain_suffix": ".github.com",
+          "outbound": "vless-out"
+        },
+        {
+          "domain_suffix": ".githubusercontent.com",
+          "outbound": "vless-out"
+        },
+        {
+          "domain_suffix": ".exp-tas.com",
+          "outbound": "vless-out"
+        },
+        {
+          "domain_suffix": ".githubcopilot.com",
+          "outbound": "vless-out"
+        },
+        {
+          "domain_suffix": ".coder.com",
+          "outbound": "vless-out"
+        },
+        {
+          "domain_suffix": ".azure.com",
+          "outbound": "vless-out"
+        },
+        {
+          "domain_suffix": ".microsoft.com",
+          "outbound": "vless-out"
+        },
+        {
+          "domain_suffix": ".facebook.com",
+          "outbound": "vless-out"
+        },
+        {
+          "domain_suffix": ".fbcdn.net",
+          "outbound": "vless-out"
+        },
+        {
+          "domain_suffix": ".bitnami.com",
+          "outbound": "vless-out"
+        },
+        {
+          "domain_suffix": ".co.uk",
+          "outbound": "vless-out"
+        },
+        {
+          "domain_suffix": ".cursor.com",
+          "outbound": "vless-out"
+        },
+        {
+          "domain_suffix": ".cursor.sh",
+          "outbound": "vless-out"
+        },
+        {
+          "domain_suffix": ".netflix.com",
+          "outbound": "vless-out"
+        },
+        {
+          "domain_suffix": ".google.dev",
+          "outbound": "vless-out"
+        },
+        {
+          "domain_suffix": ".googletagmanager.com",
+          "outbound": "vless-out"
+        },
+        {
+          "domain_suffix": ".iplocation.net",
+          "outbound": "vless-out"
         }
-      ],
+       ],
       "rule_set": [
         {
           "type": "remote",
@@ -129,7 +245,7 @@
           "url": "https://github.com/savely-krasovsky/antizapret-sing-box/releases/latest/download/antizapret.srs",
           "download_detour": "vless-out"
         }
-      ],
+      ],      
       "auto_detect_interface": true
     }
   }
